@@ -14,20 +14,20 @@ where bits 5-19 represent the three registers and 4 to 0 is the subopcode and
 the instructions. 
 The program also converts the opcode and subopcode to the instruction that they represent.
 The program also keeps track of the registers in use:
-The final output will be:
-ld r4 000000000001010
-ld r4 000000000001011
-0000 r1 r2 r3 add
-0000 r3 00101 r4 shl
-brn r4 000000000000111
-st r4 000000000001100
-0000 00000 00000 00000 halt
-0000 00000 r4 r4 sub
-st r4 000000000001100
-0000 00000 00000 00000 halt
-0000 00000 00000 00000 nop
-0000 00000 00000 00000 nop
-0000 00000 00000 00000 nop
+The final output will be:<br />
+ld r4 000000000001010<br />
+ld r4 000000000001011<br />
+0000 r1 r2 r3 add<br />
+0000 r3 00101 r4 shl<br />
+brn r4 000000000000111<br />
+st r4 000000000001100<br />
+0000 00000 00000 00000 halt<br />
+0000 00000 r4 r4 sub<br />
+st r4 000000000001100<br />
+0000 00000 00000 00000 halt<br />
+0000 00000 00000 00000 nop<br />
+0000 00000 00000 00000 nop<br />
+0000 00000 00000 00000 nop<br />
 
 The hex input can be replaced with any other hex input of the same formatting and 
 the program will convert and ouput the appropriate instruction set as well. 
@@ -57,27 +57,27 @@ Ouput:0000 00001 00010 00011 00011
 Test Passed 
 
 Tested appending 0s to the beginning of a binary if the length mod 8 was not 0.
-Input: 100001
-Ouput: 00010001
-Input: 100010
-Output: 000100010
-Test passed
+Input: 100001<br />
+Ouput: 00010001<br />
+Input: 100010<br />
+Output: 000100010<br />
+Test passed<br />
 
 Tested printing instructions in binary with partitions
-Output: 0001 00001 000000000001010
-0001 00010 000000000001011
-0000 00001 00010 00011 00011
-0000 00011 00101 00100 01000
-0111 00100 000000000000111
-0010 00100 000000000001100
-0000 00000 00000 00000 11111
-0000 00000 00100 00100 00100
-0010 00100 000000000001100
-0000 00000 00000 00000 11111
-0000 00000 00000 00000 00000
-0000 00000 00000 00000 00000
-0000 00000 00000 00000 00000
-Test Passed
+Output: 0001 00001 000000000001010<br />
+0001 00010 000000000001011<br />
+0000 00001 00010 00011 00011<br />
+0000 00011 00101 00100 01000<br />
+0111 00100 000000000000111<br />
+0010 00100 000000000001100<br />
+0000 00000 00000 00000 11111<br />
+0000 00000 00100 00100 00100<br />
+0010 00100 000000000001100<br />
+0000 00000 00000 00000 11111<br />
+0000 00000 00000 00000 00000<br />
+0000 00000 00000 00000 00000<br />
+0000 00000 00000 00000 00000<br />
+Test Passed<br />
 
 Tested conversion from binary to instruction set
 Test Passed. Similar to test below.
