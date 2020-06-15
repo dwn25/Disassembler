@@ -43,27 +43,27 @@ with the hex code by replacing the input with hex code in the same formatting. T
 registers may have to be updated as well. 
 
 Tested Conversion to binary.
-Input: 10 80 0a 
-Output: 00010000 10000000 00001010
-Input: 11 00 0b
-Output: 00010001 00000000 00001011
-Test Passed
+Input: 10 80 0a <br />
+Output: 00010000 10000000 00001010<br />
+Input: 11 00 0b<br />
+Output: 00010001 00000000 00001011<br />
+Test Passed<br />
 
-Tested partitioning with different opcodes.
-Input: 000100001000000000001010
-Output:0001 00001 000000000001010
-Input:000000001000100001100011
-Ouput:0000 00001 00010 00011 00011
-Test Passed 
+Tested partitioning with different opcodes.<br />
+Input: 000100001000000000001010<br />
+Output:0001 00001 000000000001010<br />
+Input:000000001000100001100011<br />
+Ouput:0000 00001 00010 00011 00011<br />
+Test Passed <br />
 
-Tested appending 0s to the beginning of a binary if the length mod 8 was not 0.
+Tested appending 0s to the beginning of a binary if the length mod 8 was not 0.<br />
 Input: 100001<br />
 Ouput: 00010001<br />
 Input: 100010<br />
 Output: 000100010<br />
 Test passed<br />
 
-Tested printing instructions in binary with partitions
+Tested printing instructions in binary with partitions<br />
 Output: 0001 00001 000000000001010<br />
 0001 00010 000000000001011<br />
 0000 00001 00010 00011 00011<br />
@@ -79,38 +79,38 @@ Output: 0001 00001 000000000001010<br />
 0000 00000 00000 00000 00000<br />
 Test Passed<br />
 
-Tested conversion from binary to instruction set
-Test Passed. Similar to test below.
-Tested in tux and the output remained the same.  
-Output:
-ld r4 000000000001010
-ld r4 000000000001011
-0000 r1 r2 r3 add
-0000 r3 00101 r4 shl
-brn r4 000000000000111
-st r4 000000000001100
-0000 00000 00000 00000 halt
-0000 00000 r4 r4 sub
-st r4 000000000001100
-0000 00000 00000 00000 halt
-0000 00000 00000 00000 nop
-0000 00000 00000 00000 nop
-0000 00000 00000 00000 nop
-Test Passed
+Tested conversion from binary to instruction set<br />
+Test Passed. Similar to test below.<br />
+Tested in tux and the output remained the same. <br /> 
+Output:<br />
+ld r4 000000000001010<br />
+ld r4 000000000001011<br />
+0000 r1 r2 r3 add<br />
+0000 r3 00101 r4 shl<br />
+brn r4 000000000000111<br />
+st r4 000000000001100<br />
+0000 00000 00000 00000 halt<br />
+0000 00000 r4 r4 sub<br />
+st r4 000000000001100<br />
+0000 00000 00000 00000 halt<br />
+0000 00000 00000 00000 nop<br />
+0000 00000 00000 00000 nop<br />
+0000 00000 00000 00000 nop<br />
+Test Passed<br />
 
 
 Explanation of what the instructino set entails:
-ld x,r1         -> load x into register 1
-ld y,r2         -> load y into register 2
+ld x,r1         -> load x into register 1<br />
+ld y,r2         -> load y into register 2<br />
 add r1,r2,r4    -> add the values in register 1 and register 2 into
-                register 3
-shl r3,5,r4     -> shift register 3 5 times and put in register 4
-brn r4,skip     -> branch if negative register 4
-halt            -> ignores register
+                register 3<br />
+shl r3,5,r4     -> shift register 3 5 times and put in register 4<br />
+brn r4,skip     -> branch if negative register 4<br />
+halt            -> ignores register<br />
 sub r0,r4,r4    -> if negative, subtract register 4 from register 0 
-                and store new value in register 4
-st r4,z         -> store from register 4 to memory into  z
-halt            -> ignores register
-x data 0        -> data in x
-y data 0        -> data in y
-z data 0        -> data in z
+                and store new value in register 4<br />
+st r4,z         -> store from register 4 to memory into  z<br />
+halt            -> ignores register<br />
+x data 0        -> data in x<br />
+y data 0        -> data in y<br />
+z data 0        -> data in z<br />
